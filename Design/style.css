@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    top: 0;
+    z-index: 1000;
+
+    background-color: #000;
+    padding: 5px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.navbar img {
+    height: 100px;
+    width: 150px;
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;   /* THIS puts icon on top */
+    align-items: center;
+
+    gap: 4px;
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links li a i {
+    font-size: 25px;
+}
+
+.nav-links li a:hover {
+    color: #ed0a0a;
+}
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('/images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 55px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero-content span {
+    color: #ed0a0a;
+}
+
+.hero-content p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.hero-content button a{
+    text-decoration: none;
+    color: white;
+}
+
+.hero-content button {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    background: #ed0a0a;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+    background: #961313;
+    transform: translateY(-2px);
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
+/* CATEGORY BUTTONS */
+/* .category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background: #111;
+} */
+
+.category-nav {
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+
+    padding: 15px 20px;
+    background: #000;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.category-nav a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: #ed0a0a;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.category-nav a:hover {
+    background: #961313;
+}
+
+.favorites {
+    background-color: #000;
+    color: #fff;
+    padding: 25px;
+}
+
+.favorites h2 {
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.card-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.food-card {
+    width: 250px;
+    background: #00000092;
+    color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.food-card h3,
+.food-card p {
+    padding: 10px 15px;
+}
+
+.menu-section {
+    background-color: #000;
+    color: #ffffff;
+    padding: 80px 50px;
+    min-height: 400px;
+}
+
+.food-card button {
+  background-color: #ed0a0a;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.food-card button:hover {
+  background-color: #961313;
+  transform: scale(1.05);
+}
+
+.menu-section {
+  padding: 40px 20px 20px 20px;
+}
+
+.menu-section h2 {
+  margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 50px 40px 0px 40px;
+    margin-top: 60px;
+    border-top: 2px solid #ed0a0a;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-brand img {
+    width: 120px;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 220px;
+    color: #aaa;
+}
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #ed0a0a;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #cc0000;
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ed0a0a;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #aaa;
+}
+
+.footer-contact i {
+    color: #ed0a0a;
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    font-size: 13px;
+    color: #666;
+}
